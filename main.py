@@ -34,7 +34,7 @@ def main() -> None:
                     name=skill.get("name"), bonus=skill.get("bonus"), race=race
                 )
 
-        Player.objects.create(
+        Player.objects.get_or_create(
             nickname=player_name,
             email=player_data["email"],
             bio=player_data["bio"],
